@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:backgroundTint="@color/white"
+        android:padding="20dp">
+        <ImageView
+            android:id="@+id/btnNotNow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/close_dialog" />
+        <ImageView
+            android:id="@+id/smileyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:src="@drawable/ic_emoji_sad"
+            app:layout_constraintBottom_toTopOf="@id/rateUsMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rateUsMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingHorizontal="16dp"
+            android:text="@string/feedback_msg_primary"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/smileyImageView" />
+
+        <TextView
+            android:id="@+id/secondaryMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:lines="2"
+            android:text="@string/feedback_msg_secondary"
+            android:textColor="@color/textDarkGrey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rateUsMsg" />
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/textDarkGrey"
+            android:progressTint="@color/sunGlow"
+            android:rating="0.0"
+            app:srb_starHeight="30dp"
+            app:srb_starWidth="30dp"
+            android:secondaryProgressTint="@color/textDarkGrey"
+            android:theme="@style/RatingBar"
+            app:srb_drawableEmpty="@drawable/ic_star_empty"
+            app:srb_drawableFilled="@drawable/ic_star_filled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondaryMsg" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rateBtn"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_btn_bottom_corner_round_selector"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Sure"
+            android:textAllCaps="false"
+            android:textColor="@color/grey_level_6"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

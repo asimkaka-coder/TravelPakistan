@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TravelPakistan" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="SplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/bg_splash_12</item>
+        <item name="windowSplashScreenAnimationDuration">800</item>
+        <item name="postSplashScreenTheme">@style/Theme.TravelPakistan</item>
+    </style>
+
+
+    <style name="RatingBar" parent="android:Theme.Material">
+        <item name="colorControlNormal">@color/textDarkGrey</item>
+        <item name="colorControlActivated">@color/sunGlow</item>
+    </style>
+</resources>
